@@ -1,41 +1,15 @@
-<h1 align="center"> weather </h1>
-
-<p align="center"> A weather SDK.</p>
-
-
-## Installing
-
-```shell
-$ composer require wikin/weather -vvv
-```
-
-## Usage
-
-TODO
-
-## Contributing
-
-You can contribute in one of three ways:
-
-1. File bug reports using the [issue tracker](https://github.com/wikin/weather/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/wikin/weather/issues).
-3. Contribute new features or update the wiki.
-
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
-
-
 <h1 align="center">Weather</h1>
 
 <p align="center">:rainbow: 基于高德开放平台的 PHP 天气信息组件。</p>
 
-[![Tests](https://github.com/overtrue/weather/actions/workflows/tests.yml/badge.svg)](https://github.com/overtrue/weather/actions/workflows/tests.yml)
+[![Tests](https://github.com/wikinwu/weather/actions/workflows/tests.yml/badge.svg)](https://github.com/wikinwu/weather/actions/workflows/tests.yml)
 
-[![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/overtrue)
+[![Sponsor me](https://github.com/wikinwu/wikin/blob/master/sponsor-me-button-s.svg?raw=true)](https://github.com/sponsors/wikin)
 
 ## 安装
 
 ```sh
-$ composer require overtrue/weather -vvv
+$ composer require wikin/weather -vvv
 ```
 
 ## 配置
@@ -46,14 +20,14 @@ $ composer require overtrue/weather -vvv
 ## 使用
 
 ```php
-use Overtrue\Weather\Weather;
+use Wikin\Weather\Weather;
 
 $key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 $weather = new Weather($key);
 ```
 
-###  获取实时天气
+### 获取实时天气
 
 ```php
 $response = $weather->getLiveWeather('深圳');
@@ -218,7 +192,7 @@ array | string   getForecastsWeather(string $city, string $format = 'json')
 WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 ```
 
-可以用两种方式来获取 `Overtrue\Weather\Weather` 实例：
+可以用两种方式来获取 `Wikin\Weather\Weather` 实例：
 
 #### 方法参数注入
 
@@ -226,7 +200,7 @@ WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
     .
     .
     .
-    public function edit(Weather $weather)
+    public function show(Weather $weather)
     {
         $response = $weather->getLiveWeather('深圳');
     }
@@ -241,7 +215,7 @@ WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
     .
     .
     .
-    public function edit()
+    public function show()
     {
         $response = app('weather')->getLiveWeather('深圳');
     }
@@ -255,24 +229,6 @@ WEATHER_API_KEY=xxxxxxxxxxxxxxxxxxxxx
 
 - [高德开放平台天气接口](https://lbs.amap.com/api/webservice/guide/api/weatherinfo/)
 
-## :heart: Sponsor me
-
-[![Sponsor me](https://github.com/overtrue/overtrue/blob/master/sponsor-me.svg?raw=true)](https://github.com/sponsors/overtrue)
-
-如果你喜欢我的项目并想支持它，[点击这里 :heart:](https://github.com/sponsors/overtrue)
-
-
-## Project supported by JetBrains
-
-Many thanks to Jetbrains for kindly providing a license for me to work on this and other open-source projects.
-
-[![](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://www.jetbrains.com/?from=https://github.com/overtrue)
-
-## PHP 扩展包开发
-
-> 想知道如何从零开始构建 PHP 扩展包？
->
-> 请关注我的实战课程，我会在此课程中分享一些扩展开发经验 —— [《PHP 扩展包实战教程 - 从入门到发布》](https://learnku.com/courses/creating-package)
 
 ## License
 
