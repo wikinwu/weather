@@ -1,0 +1,30 @@
+{
+    "name": "wikin\/weather",
+    "description": "A weather SDK for study.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wikin",
+            "email": "wikinwu@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wikin\\Weather\\": "./src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "mockery/mockery": "^1.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wikin\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+}
